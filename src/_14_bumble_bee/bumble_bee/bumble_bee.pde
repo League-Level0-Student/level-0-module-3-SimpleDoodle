@@ -1,8 +1,34 @@
+import java.util.Random;
 void draw() {
 /*Use a loop to make a body for the Bee!
 Then put his head on using drawBeeFace(x,y)
 Use Modulo to make the colors alternate 
 */
+
+Random r = new Random();
+int number = new Random().nextInt(100);
+    if (number % 2 == 0) {
+     drawYellow(mouseX,mouseY);
+    }
+    else {
+     drawBlack(mouseX,mouseY);
+    }
+drawBeeFace(450 , 450);
+
+
+
+}
+void drawYellow(int x, int y) {
+  
+  fill(new Random().nextInt(256),new Random().nextInt(256),new Random().nextInt(256));
+ ellipse(x ,y ,60 ,60 );
+ 
+}
+
+void drawBlack(int x, int y) {
+  fill(new Random().nextInt(256),new Random().nextInt(256),new Random().nextInt(256));
+ ellipse(x ,y ,60 ,60 );
+ 
 }
 
 void drawFlower(int x, int y) {
